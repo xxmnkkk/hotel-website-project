@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer"
+    ;
+}
+
+#header-container {
+    padding: 20px;
+    grid-area: header;
+    /* border: 1px solid black; */
+    height: auto;
+    background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(192,207,225,1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+
+#main-section {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+#header-container > #header-text {
+    color: black;
+    border: 1px solid black;
+    width: 200px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+/* Css for header-nav-link-container */
+#header-nav-link-container {
+    width: 100%;
+}
+
+#header-nav-link-container ul {
+    display: flex;
+    /* used to remove the bullet points from my unordered list */
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+/* Descendent combinator */
+.nav-list-items a {
+    color: black;
+    /* Used for removing the underline in a tag */
+    text-decoration: none;
+}
+
+/* Css for feature section */
+#main-section{
+    width: 100%;
+    height: auto;
+}
+
+#main-section #feature-section{
+    position: relative;
+}
+#main-section #feature-section img{
+    position: relative;
+    max-width: 100%;
+}
+
+#main-section #feature-section #feature-meal-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#main-section #feature-section #feature-meal-text h1, #main-section #feature-section #feature-meal-text p{
+    color: white;
+}
+
+#main-section #feature-section #feature-meal-learnmore{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    /* background-color: orange; */
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+}
+
+#main-section #feature-section #feature-meal-learnmore:hover{
+    cursor: pointer;
+    background-color: black;
+    border: 1px solid black;
+}
+
+/* Css for favourite meal section */
+#favourite-meal-section{
+    position: relative;
+    margin: 60px;
+    /* border: 1px solid black; */
+    height: 400px;
+    width: 92%;
+    box-shadow: 0 0 10px 1px lightgray;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#favourite-meal-section #favourite-meal-text{
+    width: 50%;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+#favourite-meal-section #favourite-meal-text a{
+    text-decoration: none;
+        color: green;
+}
+
+#favourite-meal-section #image-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+
+#favourite-meal-section #image-container img{
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 60%;
+}
+
+/* Css for how it works section */
+#how-it-works-section{
+    width: 100%;
+    height: 350px;
+}
+
+#howitworks-title{
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    font-weight: 800;
+}
+
+#howitworks-info{
+    padding: 20px;
+    height: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.howitworks-details{
+    padding: 20px;
+}
+
+/* Css for city section */
+#city-section{
+    height: 450px;
+    display: flex;
+}
+
+.city-text{
+    width: 50%;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.city-map{
+    width: 50%;
+    height: 70%;
+    box-shadow: 0 0 10px 2px lightblue;
+    border-radius: 20px;
+    margin: 50px 50px 30px 30px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.city-map iframe{
+    width: 100%;
+    height: 100%;
+}
+
+/* Css for customer-testimonial-section */
+#customer-testimonial-section{
+    padding: 60px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.customer-inner-div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.customer-feedbacks{
+    padding: 20px;
+    box-shadow: 0 0 10px 2px lightgray;
+    border-radius: 30px;
+    background-color: #0179FF;
+    color: white;
+}
+
+/* Css for sign up section */
+#signup-section{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;;
+}
+
+.form-elements{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+
+    > input{
+        width: 150px;
+        height: 24px;
+    }
+}
+
+#submit-button-div{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#submit-button{
+    width: 150px;
+    height: 50px;
+    border: none;
+    background-color: lightgreen;
+    border-radius: 15px;
+}
+
+#submit-button:hover{
+    background-color: green;
+    cursor: pointer;
+}
+
+/* Css for contact section */
+#contact-section{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    > p{
+        width: 70%;
+        text-align: center;
+    }
+
+    > form{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+.form-items{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+
+    > input{
+        width: 170px;
+        height: 24px;
+    }
+}
+
+#contact-submit-button{
+    display: flex;
+    justify-content: center;
+}
+
+#contact-submit-button input{
+    width: 150px;
+    height: 50px;
+    border: none;
+    background-color: lightgreen;
+    border-radius: 15px;
+}
+
+#contact-submit-button input:hover{
+    background-color: green;
+    cursor: pointer;
+}
+
+/* Css for footer section */
+#footer-container{
+    height: 300px;
+    background-color: #F5F5F7;
+}
+
+#footer-contact-section{
+    padding: 40px;
+    
+    > h3{
+        margin-bottom: 10px;
+    }
+}
+
+#line-break{
+    border: 0.5px solid lightgray;
+    margin: 0px 30px 0px 30px;
+}
+
+#all-right-reserved-text{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#all-right-reserved-text p{
+ color: gray;
+}
+
+#bottom-text{
+    display: flex;
+    margin-top: 30px;
+}
+
+#bottom-text div{
+    width: 33%;
+    text-align: center;
+    color: gray;
+}
+
+.legal-class{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+
+/* How do we make our webpage more responsive?? */
+/* We can use media queries in css to make our web page more rensponsive, for varing screen sizes */
+@media screen and (max-width: 920px) {
+    #favourite-meal-section{
+        width: 82%;
+        height: 450px;
+    }
+    #favourite-meal-text{
+        position: relative;
+        font-size: small;
+        margin-top: -6%;
+        margin-left: -4%;
+    }
+
+    #image-container{
+        margin-right: -10px;
+    }
+
+    #how-it-works-section{
+        height: 500px;
+    }
+
+    #city-section{
+        height: 450px; 
+    }
+
+    #city-text{
+        font-size: medium;
+    }
+
+
+}
+
+.scroll-link.active{
+    font-weight: bold;
+    color: blue;
+}
+
+html, body{
+    transition: scroll-behaviour 0.5s;
+}
+
+.section{
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+.section.active{
+    opacity: 1;
+}
